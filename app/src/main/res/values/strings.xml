@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">LizaTestApp</string>
+    <string name="web_client_id">942191794445-7vgad8uoe9s5sfnvsh918el5cku5gqln.apps.googleusercontent.com</string>
+    <string name="phones">Phones:</string>
+    <string name="emails">Emails:</string>
+    <string name="male">Man</string>
+    <string name="female">Woman</string>
+    <string name="input_text">Enter text</string>
+    <string name="log_out">Log out</string>
+    <string name="sort_reverse">Sort reverse</string>
+    <string name="sort_by_alpha">Sort by alphabet</string>
+    <string name="more">See more</string>
+    <string name="show_only_men">Show men only</string>
+    <string name="show_only_woman">Show women only</string>
+    <string name="no_phones_yet">No phones yet</string>
+    <string name="no_emails_yet">No emails yet</string>
+    <string name="please_enter_name">Please enter name</string>
+    <string name="contact_avatar">Contact avatar</string>
+    <string name="reset">Reset</string>
+    <string name="you_cant_add_more_than_5">You can not add more than 5</string>
+    <string name="welcome_signin">Welcome!\nSign in to see your contact list</string>
+    <string name="enter_name">Enter name</string>
+</resources>

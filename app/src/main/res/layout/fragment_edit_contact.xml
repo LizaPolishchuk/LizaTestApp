@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_contact_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/space_normal"
+            android:layout_marginTop="@dimen/space_normal"
+            android:src="@drawable/placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/et_contact_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_normal"
+            android:layout_marginEnd="@dimen/space_normal"
+            android:hint="@string/enter_name"
+            android:maxLength="150"
+            android:maxLines="2"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_contact_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Use Namenamamdmadmamdmadmamdaaaaamdamd" />
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/et_contact_name"
+            app:layout_constraintTop_toBottomOf="@id/et_contact_name">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_blue_bright"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_light"
+                android:text="@string/female" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_text_phones"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/space_normal"
+            android:background="@color/gray"
+            android:paddingStart="@dimen/space_normal"
+            android:paddingEnd="@dimen/space_normal"
+            android:text="@string/phones"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/iv_contact_avatar"
+            app:layout_constraintTop_toBottomOf="@id/iv_contact_avatar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_contact_phones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toStartOf="@id/tv_text_phones"
+            app:layout_constraintTop_toBottomOf="@id/tv_text_phones" />
+
+        <TextView
+            android:id="@+id/tv_text_emails"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/space_normal"
+            android:background="@color/gray"
+            android:paddingStart="@dimen/space_normal"
+            android:paddingEnd="@dimen/space_normal"
+            android:text="@string/emails"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/rv_contact_phones"
+            app:layout_constraintTop_toBottomOf="@id/rv_contact_phones" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_contact_emails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toStartOf="@id/tv_text_emails"
+            app:layout_constraintTop_toBottomOf="@id/tv_text_emails" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

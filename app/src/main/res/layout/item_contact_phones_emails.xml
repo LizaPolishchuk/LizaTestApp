@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp">
+
+    <TextView
+        android:id="@+id/tv_phone_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:autoLink="phone|email"
+        android:textSize="20sp"
+        tools:text="lxaidid@vdmv.vkos"
+        tools:visibility="gone" />
+
+    <EditText
+        android:id="@+id/et_phone_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:hint="@string/input_text"
+        android:imeOptions="actionNext"
+        android:maxLength="100"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_remove_phone_email"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:src="@drawable/ic_remove"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_add_phone_email"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:src="@drawable/ic_add_circle"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</LinearLayout>

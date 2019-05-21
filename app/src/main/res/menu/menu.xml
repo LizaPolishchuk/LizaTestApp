@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.ui.ContactsActivity">
+
+    <item
+        android:id="@+id/item_logout"
+        android:icon="@drawable/ic_exit"
+        android:title="@string/log_out"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_more"
+        android:icon="@drawable/ic_more_vert"
+        android:title="@string/more"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/item_sort_by_alpha"
+                android:icon="@drawable/ic_sort_a_z"
+                android:title="@string/sort_by_alpha" />
+
+            <item
+                android:id="@+id/item_sort_reverse"
+                android:icon="@drawable/ic_sort_z_a"
+                android:title="@string/sort_reverse" />
+
+            <item
+                android:id="@+id/item_only_male"
+                android:icon="@drawable/ic_male"
+                android:title="@string/show_only_men" />
+
+            <item
+                android:id="@+id/item_only_female"
+                android:icon="@drawable/ic_female"
+                android:title="@string/show_only_woman" />
+        </menu>
+    </item>
+</menu>

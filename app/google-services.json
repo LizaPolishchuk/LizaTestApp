@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "942191794445",
+    "firebase_url": "https://lizatestapp-1558117193415.firebaseio.com",
+    "project_id": "lizatestapp-1558117193415",
+    "storage_bucket": "lizatestapp-1558117193415.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942191794445:android:90a20153b765ce31",
+        "android_client_info": {
+          "package_name": "com.example.android.lizatestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942191794445-3bbk5vjqbfvmfagcptvhi6mre2fdvsgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.lizatestapp",
+            "certificate_hash": "44d7c7f99eed39030899ae735dcabc5c9ae7c1f1"
+          }
+        },
+        {
+          "client_id": "942191794445-7vgad8uoe9s5sfnvsh918el5cku5gqln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt3Q103bUHsEpnMBKonRJzBn6EaD0DyM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942191794445-7vgad8uoe9s5sfnvsh918el5cku5gqln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
