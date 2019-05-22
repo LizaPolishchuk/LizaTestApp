@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.android.lizatestapp.R;
 import com.example.android.lizatestapp.model.Contact;
+import com.example.android.lizatestapp.utils.DeviceUtils;
 import com.example.android.lizatestapp.utils.ExtraConstants;
 import com.example.android.lizatestapp.view.adapters.ContactsAdapter;
 import com.example.android.lizatestapp.view.callbacks.OnContactActionsListener;
@@ -31,6 +32,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnTextChanged;
 import butterknife.Unbinder;
 
 public class FragmentContactList extends Fragment implements View.OnClickListener, OnContactClickListener, OnContactActionsListener {
@@ -41,13 +43,23 @@ public class FragmentContactList extends Fragment implements View.OnClickListene
     ViewGroup vgSortMode;
     @BindView(R.id.tv_sort_type)
     TextView tvSortType;
+    @BindView(R.id.vg_search)
+    ViewGroup vgSearch;
 
     private List<Contact> contactList = new ArrayList<>();
+    private List<Contact> searchList = new ArrayList<>();
     private ContactsAdapter contactsAdapter;
     private Unbinder unbinder;
     private ContactsViewModel contactsViewModel;
     private DatabaseReference databaseReference;
+    private boolean searchMode = false;
 
+    @OnTextChanged(R.id.et_search)
+    public void onTextChanged(CharSequence text) {
+        if (searchMode) {
+            filter(text.toString());
+        }
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -117,6 +129,19 @@ public class FragmentContactList extends Fragment implements View.OnClickListene
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.item_search:
+                if (!searchMode) {
+                    searchMode = true;
+                    vgSearch.setVisibility(View.VISIBLE);
+                    vgSearch.requestFocus();
+                    DeviceUtils.showKeyboard(getContext());
+                } else {
+                    searchMode = false;
+                    vgSearch.setVisibility(View.GONE);
+                    refreshAdapter(contactList);
+                    DeviceUtils.hideKeyboard(getContext());
+                }
+                break;
             case R.id.item_sort_by_alpha:
                 enableSortMode(true, item.getTitle().toString());
                 Collections.sort(contactList, (contact1, contact2) -> contact1.getName().compareToIgnoreCase(contact2.getName()));
@@ -146,6 +171,20 @@ public class FragmentContactList extends Fragment implements View.OnClickListene
                 sortedList.add(contact);
         }
         contactsAdapter.refreshItems(sortedList);
+    }
+
+    private void filter(String text) {
+        searchList.clear();
+        if (!text.isEmpty()) {
+            for (Contact contact : contactList) {
+                if (contact.getName().toLowerCase().contains(text.toLowerCase())) {
+                    searchList.add(contact);
+                }
+            }
+            refreshAdapter(searchList);
+        } else {
+            refreshAdapter(contactList);
+        }
     }
 
     @OnClick(R.id.tv_reset_sort)

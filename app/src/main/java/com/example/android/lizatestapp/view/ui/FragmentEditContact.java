@@ -109,7 +109,7 @@ public class FragmentEditContact extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View view) {
         String name = etContactName.getText().toString();
-        if (name.isEmpty()) {
+        if (name.trim().isEmpty()) {
             Toast.makeText(getContext(), getString(R.string.please_enter_name), Toast.LENGTH_SHORT).show();
         } else {
             String gender;

@@ -11,6 +11,12 @@
         app:showAsAction="always" />
 
     <item
+        android:id="@+id/item_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/item_more"
         android:icon="@drawable/ic_more_vert"
         android:title="@string/more"

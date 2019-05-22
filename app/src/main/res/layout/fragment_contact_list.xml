@@ -33,6 +33,22 @@
             tools:text="Sort type: " />
     </FrameLayout>
 
+    <FrameLayout
+        android:id="@+id/vg_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_name"
+            android:textSize="20sp"
+            android:layout_margin="5dp"/>
+    </FrameLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_contacts_list"
         android:layout_width="match_parent"

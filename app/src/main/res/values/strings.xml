@@ -20,4 +20,5 @@
     <string name="you_cant_add_more_than_5">You can not add more than 5</string>
     <string name="welcome_signin">Welcome!\nSign in to see your contact list</string>
     <string name="enter_name">Enter name</string>
+    <string name="search">Search</string>
 </resources>
